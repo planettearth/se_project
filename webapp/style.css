@@ -170,12 +170,12 @@ li a:hover:not(.active) {
 }
 
 #section1{
-	background-color: #9ec6cc;
+	background-color: #9ecccd;
 	font-size: 10px;
 }
 
 #section3{
-	background-color:#D9A88F; 
+	background-color:#e7eaac; 
 }
 
 #section3_image{
@@ -186,14 +186,15 @@ li a:hover:not(.active) {
 }
 
 #section2{
-	background-image: url("image/bg2.png");
-	background-color:#97C187; 
+	background-image: url("image/sec2.png");
+	background-color:#accfa8; 
 	background-size:cover;
 	background-repeat: no-repeat;
 }
 
 #section4{
-	background-image: url("image/bg3.png");
+	background-image: url("image/sec3.png");
+	background-color:#edbeab;
 	background-size:cover;
 	background-repeat: no-repeat;
 }

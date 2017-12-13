@@ -1,0 +1,100 @@
+<?php
+	mysql_connect("localhost","it58070161_se","password");
+	mysql_select_db("it58070161_se");
+	
+		
+		
+		
+		$university = "";
+
+		if ($_POST["type"] == "university"){
+  			// echo "University!!!";
+  			$university = "university";
+		} elseif ($_POST["type"] == "highschool") {
+    		// echo "High School";
+  			$university = "highschool";
+
+		}
+
+		// echo $university;
+
+
+
+
+
+
+		$strSQL = "INSERT INTO userinfo (username, tel, university, faculty, role, firstname, lastname) VALUES ('$_POST[username]','$_POST[telephone]','$_POST[university]','$_POST[faculty]','$university','$_POST[firstname]','$_POST[lastname]')";
+
+		$objQuery = mysql_query($strSQL);
+
+
+		$strSQL = "INSERT INTO login (username, password) VALUES ('$_POST[username]','$_POST[password]')";
+
+		$objQuery = mysql_query($strSQL);
+		
+		
+		
+	// }
+
+	mysql_close();
+?>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <style type="text/css">
+    body{
+      background-color: #AEBBC7;
+    }
+
+    
+  </style>
+</head>
+<body>
+	<ul>
+      <li><a href="index.php">ShareSheetPlease</a></li>
+      
+
+      <!-- <li style="float:right"><a href="login.php">Login</a></li>
+      <li style="float:right"><a href="#section2">About</a></li> -->
+      
+    </ul>
+
+<center>
+	<br><br><br><br>
+    <h2>สมัครสมาชิกเรียบร้อยเเล้ว</h2>
+    <br>
+
+    <center><img src="image/l3.png"></center>
+
+
+	ไปหน้า <a href='login.php'>เข้าสู่ระบบ</a>
+</center>
+
+
+<script type="text/javascript" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>
