@@ -1,0 +1,274 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+@import url(https://fonts.googleapis.com/css?family=Sarala);
+@import url(https://fonts.googleapis.com/css?family=Alike);
+
+
+@font-face {
+    font-family: supermarket;
+    src: url(font/supermarket.ttf);
+}
+
+h1{
+	font-family: supermarket;
+}
+h2{
+	font-family: supermarket;
+}
+h3{
+	font-family: supermarket;
+}
+h4{
+	font-family: supermarket;
+}
+h5{
+	font-family: supermarket;
+}
+
+
+p{
+	font-family: supermarket;
+}
+
+div{
+	font-family: supermarket;
+}
+
+
+body{
+	/*background-color: #18BC9C;*/
+	position: relative; 
+}
+
+
+ul {
+	height: 60px;
+	font-size: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    color: white;
+    font-family: supermarket;
+
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+    color: white;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+
+.navbar{
+	height: 70px;
+	font-size: 25px;
+	 /*position: fixed;*/
+	 width: 100%; 
+}
+
+.text-size1{
+	font-size: 80px;
+	
+}
+.text-size2{
+	font-size: 40px;
+}
+.text-size3{
+	font-size: 20px;
+}
+
+
+.text-black{
+	color: black;
+}
+.text-green{
+	color: #18BC9C;
+}
+.text-white{
+	color: white;
+}
+
+
+.text-center{
+	text-align: center;
+}
+.text-right{
+	text-align: right;
+}
+.text-left{
+	text-align: left;
+}
+
+
+
+
+.btn-color{
+	color: white;
+	border-color: white;
+	font-size: 25px;
+	height: 80px;
+	width: 150px;
+}
+.btn-color:hover{
+	color: black;
+	background-color: white;
+	border-color: white;
+}
+.btn-color:active{
+	color: black;
+    background-color: white;
+} 
+
+.btn-color2{
+	color: black;
+	border-color: #18BC9C;
+	font-size: 25px;
+	height: 60px;
+}
+.btn-color2:hover{
+	color: black;
+	background-color: #18BC9C;
+	border-color: white;
+}
+.btn-color2:active{
+	color: black;
+    background-color: white;
+}
+
+.btn-color3{
+	color: black;
+	border-color: #18BC9C;
+	font-size: 25px;
+	height: 60px;
+	width: 180px;
+}
+.btn-color3:hover{
+	color: black;
+	background-color: #18BC9C;
+	border-color: white;
+}
+
+.btn-color3:active{
+	color: black;
+    background-color: white;
+}
+
+#section1{
+	background-color: #9ec6cc;
+	font-size: 10px;
+}
+
+#section3{
+	background-color:#18BC9C; 
+}
+
+#section3_image{
+	width: 250px;
+	height: 250px;
+	border-radius : 50%;
+
+}
+
+#section2{
+	background-image: url("image/bg2.png");
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+
+#section4{
+	background-image: url("image/bg3.png");
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+
+/*#section3_image:hover{
+	box-shadow: 5px 5px 10px black;
+}*/
+
+#section_login{
+	
+}
+
+.fill_login{
+
+}
+
+
+
+.btn_hide{
+
+	text-align: center;
+	width: 80px;
+	height: 50px;
+	background: red;
+	border-radius: 10px;
+}
+
+.btn_hide p{
+
+	top :50%;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #18BC9C;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    border-radius: 10px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #128a72;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}

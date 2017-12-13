@@ -1,104 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Parallax Template - Materialize</title>
+  <head>
+    <title>Login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
-<body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="category.html">Category</a></li>
-        <li><a href="top10.html">TOP 10</a></li>
-        <li><a href="upload.html">Upload</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="search.html">Search</a></li>
-        <li><a href="index.html">Logout</a></li>
-      </ul>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="category.html">Category</a></li>
-        <li><a href="top10.html">TOP 10</a></li>
-        <li><a href="upload.html">Upload</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="search.html">Search</a></li>
-        <li><a href="index.html">Logout</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <style type="text/css">
+    body{
+      background-color: #AEBBC7;
+    }
+
+    
+  </style>
+  </head>
+  <body>
+
+
+    <ul>
+      <li><a href="index.php">ShareSheetPlease</a></li>
+      
+
+      <!-- <li style="float:right"><a href="login.php">Login</a></li>
+      <li style="float:right"><a href="#section2">About</a></li> -->
+      
+    </ul>
+
+
+
+    <div id="section_login">
+      <br><br>
+      <p class="text-size2 text-center text-green">เข้าสู่ระบบ</p>
+    
+      
     </div>
-  </nav>
+    <center><img src="image/log.png" width="200" height="200"></div></center>
 
 
-  <div class="row"> 
-
-    <div class="col s7">
-
-    </div>
-
-    <div class="col s3">
-     <br>
-     <div class="input-field">
-      <i class="material-icons prefix">account_circle</i>
-      <input id="username" type="text" class="validate">
-      <label for="Username">Username</label>
-    </div>
-    <div class="input-field">
-      <i class="material-icons prefix">vpn_key</i>
-      <input id="password" type="password" class="validate">
-      <label for="Password">Password</label>
-    </div>
-  </div>
-</div>
 
 
-<footer class="page-footer teal">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">Company Bio</h5>
-        <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+     <center>
+      
+    <form method="post" action="logincheck.php">
+      <input name="username" type="text" id="username" placeholder="Username">
+      <br><br>
+      <input name="password" type="password" id="password" placeholder="Password">
+      <br><br><br>
+      <button>&#3648;&#3586;&#3657;&#3634;&#3626;&#3641;&#3656;&#3619;&#3632;&#3610;&#3610;</button>
+      <br>
+      <br>
+      <p class="message">&#3618;&#3633;&#3591;&#3652;&#3617;&#3656;&#3617;&#3637;&#3610;&#3633;&#3597;&#3594;&#3637;&#3651;&#3594;&#3656;&#3652;&#3627;&#3617;<a href="register.php">&#3626;&#3617;&#3633;&#3588;&#3619;&#3610;&#3633;&#3597;&#3594;&#3637;&#3651;&#3627;&#3617;&#3656;</a></p>
+    </form>
+  
+ </center>
 
 
-      </div>
-      <div class="col l3 s12">
-        <h5 class="white-text">Settings</h5>
-        <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
-          <li><a class="white-text" href="#!">Link 2</a></li>
-          <li><a class="white-text" href="#!">Link 3</a></li>
-          <li><a class="white-text" href="#!">Link 4</a></li>
-        </ul>
-      </div>
-      <div class="col l3 s12">
-        <h5 class="white-text">Connect</h5>
-        <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
-          <li><a class="white-text" href="#!">Link 2</a></li>
-          <li><a class="white-text" href="#!">Link 3</a></li>
-          <li><a class="white-text" href="#!">Link 4</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="footer-copyright">
-    <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-    </div>
-  </div>
-</footer>
 
 
-<!--  Scripts-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
-
-</body>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
 </html>
