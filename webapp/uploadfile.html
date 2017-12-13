@@ -1,0 +1,150 @@
+<?php
+    
+    session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Share Sheet Please</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <ul>
+      <li><a href="homepage.php">ShareSheetPlease</a></li>
+      <li style="float:right"><a href="logout.php">ล็อคเอ้าท์</a></li>
+      <li style="float:right"><a href="profile.php">โปรไฟล์</a></li>
+      
+    </ul>
+
+
+    <br><br><br><br>
+
+    <div align="center">
+       <form action="upload.php" method="post" enctype="multipart/form-data">
+                
+                <h1>อัพโหลดชีท</h1>
+
+                <label for="filename">ชื่อไฟล์:</label>
+                <input type="text" name="filename" id="filename"><br><br>
+
+
+
+
+            <label for="role">ระดับการศึกษา:</label>
+            <select name="role" id="role">
+                <option name="student" value="student">โรงเรียน</option>
+                <option name="university" value="university">มหาวิทยาลัย</option>
+            </select>
+
+
+
+
+            <br><br>
+            <div class="text_muttayom">
+
+            <label for="faculty">วิชา</label>
+            <select name="faculty" id="faculty">
+                <option disabled selected value> -- เลือกวิชา -- </option>
+                <option value="sci">วิทยาศาสาตร์</option>
+                <option value="math">คณิตศาสตร์</option>
+                <option value="thai">ภาษาไทย์</option>
+                <option value="language">ภาษาต่างประเทศ</option>
+                <option value="social">สังคมศึกษา</option>
+                <option value="health">สุขศึกาา และพละศึกษา</option>
+                <option value="tech">การงานอาชีพ และเทคโนโลยี</option>
+            </select>
+
+
+
+
+
+            </div>
+
+            <br><br>
+            <div class="text_university">
+
+             <label for="faculty">คณะ</label>
+            <select name="faculty" id="faculty">
+                <option disabled selected value> -- เลือกคณะ -- </option>
+                <option value="med">วิทยาศาสตร์สุขภาพ</option>
+                <option value="science">วิทยาศาสตร์</option>
+                <option value="edu">ครุศาสตร์อุตสาหกรรม</option>
+                <option value="law">นิติศาสตร์</option>
+                <option value="comart">นิเทศศาสตร์/วารสารศาสตร์และสื่อมวลช</option>
+                <option value="finance">บริหารธุรกิจ/การบัญชี</option>
+                <option value="arts">อักษรศาสตร์/มนุษยศาสตร์/ศิลปศาสตร์</option>
+                <option value="polsci">รัฐศาสตร์</option>
+                <option value="arch">สถาปัตยกรรม</option>
+                <option value="econ">เศรษฐศาสตร์</option>
+                <option value="it">เทคโนโลยีสารสนเทศ</option>
+                <option value="engineer">วิศวะกรรมศาสตร์</option>
+            </select>
+
+        </div>
+
+
+
+
+<!-- 
+            <label for="faculty">คณะ:</label>
+            <input type="text" name="faculty" id="faculty"><br><br> -->
+
+
+            <label for="file">เลือกไฟล์:</label>
+            <input type="file" name="file" id="file"><br><br>
+            <input type="submit" name="submit" value="Submit">
+
+        </form>
+    </div>
+
+     
+
+
+
+
+<br><br><br><br>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+
+    $(function() {
+    $(".text_muttayom").show();
+    $(".text_university").hide(); 
+    $('#role').change(function(){
+        if($('#role').val() == 'student') {
+            $(".text_university").hide();
+            $(".text_muttayom").show(); 
+        } else {
+            $(".text_muttayom").hide();
+            $(".text_university").show(); 
+        } 
+    });
+});
+
+</script>
+
+
+
+
+  <script type="text/javascript" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</body>
+</html>
