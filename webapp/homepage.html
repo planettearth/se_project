@@ -1,0 +1,175 @@
+<?php  
+	session_start();
+
+	$_SESSION["username"];
+
+
+	$serverName = "localhost";
+    $userName = "it58070161_se";
+    $userPassword = "password";
+    $dbName = "it58070161_se";
+
+	$objCon = mysqli_connect($serverName,$userName,$userPassword,$dbName);
+
+	$strSQL = "SELECT * FROM userinfo WHERE username = '".$_SESSION['username']."' ";
+	$objQuery = mysqli_query($objCon,$strSQL);
+	$objResult = mysqli_fetch_array($objQuery,MYSQLI_ASSOC);
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Share Sheet Please</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <style type="text/css">
+    body{
+      background-color: #AEBBC7;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <ul>
+      <li><a href="homepage.php">ShareSheetPlease</a></li>
+      <li style="float:right"><a href="logout.php">ล็อคเอ้าท์</a></li>
+      <li style="float:right"><a href="profile.php">โปรไฟล์</a></li>
+      
+    </ul>
+
+
+
+
+<br><br><br><br>
+<?php
+
+  echo "<center><h2>สวัสดี! ยินดีต้อนรับ</h2><h3> คุณ ".ucfirst($objResult["firstname"])."  ".ucfirst($objResult["lastname"])."</h3><center>";
+
+?>
+<br><br><br>
+<div class="container">
+    <div class="row">
+
+
+          <div class="col-lg-3 ml-auto">
+            <img src="image/c2.png" width="200" height="200">
+          </div>
+          <div class="col-lg-3 mr-auto">
+            <img src="image/c1.png" width="200" height="200">
+          </div>
+        </div>
+  </div>  
+  <div class="container">
+    <div class="row">
+
+
+          <div class="col-lg-3 ml-auto">
+            <a href="#section1"><button type="button" class="btn btn-outline-primary btn-color3" onclick="location.href='category.php'">ประเภทชีท</button></a> 
+          </div>
+          <div class="col-lg-3 mr-auto">
+            <button type="button" class="btn btn-outline-primary btn-color3" onclick="location.href='search.php'">ค้นหาชีท</button>
+          </div>
+        </div>
+  </div>  
+
+  <br><br>
+  <div class="container">
+    <div class="row">
+
+
+          <div class="col-lg-3 ml-auto">
+            <img src="image/c4.png" width="200" height="200">
+          </div>
+          <div class="col-lg-3 mr-auto">
+            <img src="image/c3.png" width="200" height="200">
+          </div>
+        </div>
+  </div>  
+  <div class="container">
+    <div class="row">
+
+
+          <div class="col-lg-3 ml-auto">
+            <a href="#section1"><button type="button" class="btn btn-outline-primary btn-color3" onclick="location.href='top10.php'">ติดอันดับ</button></a> 
+          </div>
+          <div class="col-lg-3 mr-auto">
+            <button type="button" class="btn btn-outline-primary btn-color3" onclick="location.href='uploadfile.php'">อัพโหลด</button>
+          </div>
+        </div>
+  </div>
+
+
+
+
+
+
+
+  
+
+
+  <script type="text/javascript" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</body>
+</html>
